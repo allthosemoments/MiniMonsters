@@ -25,28 +25,28 @@ class Deck
 		Deck() { };
 		list<Card> getStack() { return cardStack; };
 
-	void Deck::loadMainDeck()
+	void loadMainDeck()
 	{
 		list<Card> temp = readFile( "cards.txt", DECK_SIZE );
 		temp = shuffle( temp );
 		cardStack = temp;
 	}
 
-	void Deck::loadVillainDeck()
+	void loadVillainDeck()
 	{
 		list<Card> temp = readFile( "villains.txt", ENEMY_DECK_SIZE );
 		temp = shuffle( temp );
 		cardStack = temp;
 	}
 
-	void Deck::loadPlayerDeck()
+	void loadPlayerDeck()
 	{
 		list<Card> temp = readFile( "start.txt", STARTING_DECK_SIZE );
 		temp = shuffle( temp );
 		cardStack = temp;
 	}
 
-	void Deck::print()
+	void print()
 	{
 		for (list<Card>::iterator it = cardStack.begin(); 
 			it != cardStack.end(); it++)

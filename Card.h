@@ -45,38 +45,38 @@ class Card
 		}
 
 		// operators
-		bool Card::operator== (Card oth)
+		bool operator== (Card oth)
 		{
 			if ( (getTitle() ) == ( (oth.getTitle()) ) ) return true;
 			return false;
 		}
 
 		// getters
-		string Card::getTitle()    { return title; }
-		aspect Card::getType()     { return type; }
-		int Card::getAttack()      { return stats[0][0]; }
-		int Card::getBaseAttack()  { return stats[1][0]; }
-		int Card::getDefense()     { return stats[0][1]; }
-		int Card::getBaseDefense() { return stats[1][1]; }
-		int Card::getValue()       { return stats[0][2]; }
-		string Card::getAbility()  { return abilityText; }
-		string Card::getFlavor()   { return flavorText; }
+		string getTitle()    { return title; }
+		aspect getType()     { return type; }
+		int getAttack()      { return stats[0][0]; }
+		int getBaseAttack()  { return stats[1][0]; }
+		int getDefense()     { return stats[0][1]; }
+		int getBaseDefense() { return stats[1][1]; }
+		int getValue()       { return stats[0][2]; }
+		string getAbility()  { return abilityText; }
+		string getFlavor()   { return flavorText; }
 
 		// setters
-		void Card::buffAttack( int b )   { stats[0][0] += b; }
-		void Card::buffDefense( int b )  { stats[0][1] += b; }
-		void Card::scaleAttack( int s )  { stats[0][0] *= s; }
-		void Card::scaleDefense( int s ) { stats[0][1] *= s; }
-		void Card::setAttack( int x )    { stats[0][0]  = x; }
-		void Card::setDefense( int x )   { stats[0][1]  = x; }
-		void Card::resetAD()
+		void buffAttack( int b )   { stats[0][0] += b; }
+		void buffDefense( int b )  { stats[0][1] += b; }
+		void scaleAttack( int s )  { stats[0][0] *= s; }
+		void scaleDefense( int s ) { stats[0][1] *= s; }
+		void setAttack( int x )    { stats[0][0]  = x; }
+		void setDefense( int x )   { stats[0][1]  = x; }
+		void resetAD()
 		{
 			setAttack( getBaseAttack() );
 			setDefense( getBaseDefense() );
 		}
-
+		
 		// printers
-		void Card::print()
+		void print()
 		{
 			cout  << title << " ["; printType(); cout 
 				<< "] A:" << stats[0][0] 
@@ -86,14 +86,14 @@ class Card
 			cout << flavorText << endl;
 		}
 
-		void Card::printStats()
+		void printStats()
 		{
 			cout << "A:" << stats[0][0] 
 				<< " / D:" << stats[0][1] 
 				<< " / V:" << stats[0][2];
 		}
 
-		void Card::printType()
+		void printType()
 		{
 			switch( type )
 			{
