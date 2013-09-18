@@ -1,27 +1,30 @@
 #include <iostream>
 #include <string>
 
-#include "Card.h"
 #include "Deck.h"
+#include "Menu.h"
 
 using namespace std;
 
 int main()
 {
-	cout << "Hello darkness my old friend" << endl << endl;
-	char c;
+	printLogo();
 
-	Deck mainDeck;
-	mainDeck.loadMainDeck();
+	bool run = true;
+	while ( run )
+	{
+		printMenu();
 
-	Deck playerOne;
-	playerOne.loadPlayerDeck();
-	playerOne.print();
-
-	Deck villains;
-	villains.loadVillainDeck();
-	villains.print();
-
-	cin >> c;
+		char command;
+		cin >> command;
+		switch( command )
+		{
+		case '1': break;
+		case '2': break;
+		case '3': break;
+		case '4': break;
+		case '0': run = false; break;
+		}
+	}
 	return 0;
 }
