@@ -1,0 +1,79 @@
+Cutter Ants
+6
+1
+0
+0
+ 
+"They wield blades of grass."
+
+Lightning Bug
+5
+1
+0
+0
+ 
+"Cause I get a thousand hugs..."
+
+Mole
+1
+1
+0
+0
+ 
+"Moooooole"
+
+Raven
+2
+1
+0
+0
+ 
+"And the raven, never flitting, still is sitting, still is sitting."
+
+Salamander
+3
+1
+0
+0
+ 
+"When one is born from the fire, what need is there to fear it?"
+
+Toad
+4
+1
+0
+0
+ 
+"Children quickly learn to avoid the bogs where magical Toads are known the gather."
+
+Javelin
+7
+1
+0
+0
+ 
+"One of man's earliest weapons, and still the most trusted."
+
+Javelin
+7
+1
+0
+0
+ 
+"One of man's earliest weapons, and still the most trusted."
+
+Four-point Shuriken
+7
+1
+0
+0
+ 
+"Its power comes not from brawn, but from timing."
+
+Four-point Shuriken
+7
+1
+0
+0
+ 
+"Its power comes not from brawn, but from timing."

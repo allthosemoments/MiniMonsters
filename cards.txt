@@ -1,0 +1,383 @@
+Aqueous Shapeshifter
+WATER
+0
+4
+1
+Pick a creature you have already played this turn, the shapehifter mimics it.
+"The children of Poseidon are a wily bunch."
+
+Aqueous Shapeshifter
+WATER
+0
+4
+1
+Pick a creature you have already played this turn, the shapehifter mimics it.
+"The children of Poseidon are a wily bunch."
+
+Blizzard Husky
+WIND
+4
+3
+1
+
+"Emma loves me."
+
+Coalshell Tortoise
+FIRE
+2
+3
+1
+
+"It's shell burns brighter when it feels threatened."
+
+Coalshell Tortoise
+FIRE
+2
+3
+1
+
+"It's shell burns brighter when it feels threatened."
+
+Conqueror Wurm
+EARTH
+4
+5
+2
+ 
+"It writhes!—-it writhes!--with mortal pangs. The mimes become its food. And seraphs sob at vermin fangs, in human gore imbued."
+
+Earth Golem
+EARTH
+3
+5
+1
+Discard Earth Golem from your hand to prevent one damage.
+"He rises from the earth."
+
+Echo Hawk
+WIND
+2
+4
+1
+This card get +2 attack for each Echo Hawk in your discard pile.
+"Frontier settlers pray for the appearance of Echo Hawks. A flock somehow ensures a healthy food supply."
+
+Echo Hawk
+WIND
+2
+4
+1
+This card get +2 attack for each Echo Hawk in your discard pile.
+"Frontier settlers pray for the appearance of Echo Hawks. A flock somehow ensures a healthy food supply."
+
+Echo Hawk
+WIND
+2
+4
+1
+This card get +2 attack for each Echo Hawk in your discard pile.
+"Frontier settlers pray for the appearance of Echo Hawks. A flock somehow ensures a healthy food supply."
+
+Firemane Lion
+FIRE
+4
+4
+0
+
+"Fiery stuff"
+
+Golden Scarab
+WIND
+1
+8
+8
+
+"A shiny bauble, but not much more."
+
+Golden Scarab
+WIND
+1
+8
+8
+
+"A shiny bauble, but not much more."
+
+Irritable Sea Bass
+WATER
+2
+3
+0
+
+"Quite irritable."
+
+Irritable Sea Bass
+WATER
+2
+3
+0
+
+"Quite irritable,"
+
+Ironfist Ogre
+EARTH
+2
+3
+0
+
+"He always has a puncher's chance."
+
+Ironfist Ogre
+EARTH
+2
+3
+0
+
+"He always has a puncher's chance."
+
+Ivory Whale
+WATER
+4
+5
+0
+
+"Thar she blows!"
+
+Leafwing Owl
+LEAF
+2
+3
+0
+
+"Hoot hoot motherfucker."
+
+Leafwing Owl
+LEAF
+2
+3
+0
+
+"Hoot hoot motherfucker."
+
+Magpie
+WIND
+1
+2
+1
+Pick an artifact card from your discard pile and return it to your deck.
+"It compulsively collects shiny objects for it's nest."
+
+Magpie
+WIND
+1
+2
+1
+Pick an artifact card from your discard pile and return it to your deck.
+"It compulsively collects shiny objects for it's nest."
+
+Opaleye Drake
+FIRE
+5
+6
+1
+Destroy two Scars from your discard pile or hand.
+"Naked time!"
+
+Opaleye Drake
+FIRE
+5
+6
+1
+Destroy two Scars from your discard pile or hand.
+"Naked time!"
+
+Phoenix
+FIRe
+3
+5
+1
+After you play the Phoenix return the the top monster card from your discard pile to your hand.
+"Nothing could hurt us then, no one could see us then." --AFI
+
+Phoenix
+FIRE
+3
+5
+1
+After you play the Phoenix return the the top monster card from your discard pile to your hand.
+"Nothing could hurt us then, no one could see us then." --AFI
+
+Razorquill Porcupine
+LEAF
+5
+5
+1
+
+"Sharp bamboo quills."
+
+Seaspear Narwhal
+WATER
+3
+4
+1
+
+"He bacons at midnight."
+
+Shining Tyger
+FIRE
+5
+4
+1
+
+"Tyger, tyger, burning bright."
+
+Snapping Mantis
+LEAF
+2
+3
+1
+
+"He utilizes mantis-style kung-fu."
+
+Stone Rhino
+EARTH
+5
+4
+1
+
+"Saaaab."
+
+Thunderbird
+BOLT
+6
+8
+1
+
+"Zapdos?"
+
+Tree Spider
+LEAF
+4
+5
+1
+ 
+"Eight legs of fury."
+
+Tree Spider
+LEAF
+4
+5
+1
+ 
+"Eight legs of fury."
+
+Kabuto of the Oni
+ARTI
+1
+4
+1
+Reveal the top card of your deck. It is destroyed if it is a Scar.
+"All that remains of a proud race of warriors."
+
+Kabuto of the Oni
+ARTI
+1
+4
+1
+Reveal the top card of your deck. It is destroyed if it is a Scar.
+"All that remains of a proud race of warriors."
+
+Healing Salve
+ARTI
+0
+3
+1
+Restore one point of health.
+"White Mages once brewed these potions in abundance. They are now quite rare."
+
+Healing Salve
+ARTI
+0
+3
+1
+Restore one point of health.
+"White Mages once brewed these potions in abundance. They are now quite rare."
+
+Healing Salve
+ARTI
+0
+3
+1
+Restore one point of health.
+"White Mages once brewed these potions in abundance. They are now quite rare."
+
+Mystic Oil
+ARTI
+0
+4
+1
+Destroy a Scar in your discard pile or hand.
+"Enemy scars make a fool think he's won; only when the oil runs out are things done."
+
+Mystic Oil
+ARTI
+0
+4
+1
+Destroy a Scar in your discard pile or hand.
+"Enemy scars make a fool think he's won; only when the oil runs out are things done."
+
+Mystic Oil
+ARTI
+0
+4
+1
+Destroy a Scar in your discard pile or hand.
+"Enemy scars make a fool think he's won; only when the oil runs out are things done."
+
+Shadowdagger
+ARTI
+3
+4
+1
+When you gain the Shadowdagger it goes on top of your deck.
+"The assassins who craft these are masters of sneaking the dagger where it was not welcome."
+
+Shadowdagger
+ARTI
+3
+4
+1
+When you gain the Shadowdagger it goes on top of your deck.
+"The assassins who craft these are masters of sneaking the dagger where it was not welcome."
+
+Staff of Summoning
+ARTI
+1
+5
+1
+Take a monster from your deck and add it to your hand.
+"The people therefore that was with him when he called Lazarus out of his grave, and raised him from the dead, bare record. --John 12:17"
+
+Staff of Summoning
+ARTI
+1
+5
+1
+Take a monster from your deck and add it to your hand.
+"The people therefore that was with him when he called Lazarus out of his grave, and raised him from the dead, bare record. --John 12:17"
+
+Vial of Liquid Fire
+ARTI
+2
+4
+1
+Does +2 damage to leaf creatures.
+""
+
+Vial of Liquid Fire
+ARTI
+2
+4
+1
+Does +2 damage to leaf creatures.
+""

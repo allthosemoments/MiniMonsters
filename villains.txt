@@ -1,0 +1,47 @@
+Aerborne Bovine
+2
+2
+12
+0
+foo
+"Fatchez la vache!"
+
+Darkwood Monstrosity
+6
+2
+12
+0
+foo
+"Wood so strong even fire cannot scorch it."
+
+Deepsea Leviathan
+4
+2
+12
+0
+foo
+"A monstrosity from the deep."
+
+Firestorm Dragon
+3
+2
+12
+0
+foo
+"He practices scorched earth warfare."
+
+Giant Boltwolf
+5
+2
+12
+0
+foo
+"His fur bristles with overcharged electricty."
+
+Specter of Atlas
+1
+2
+12
+0
+foo
+"The spirit of the Earth itself becomes a threat."
