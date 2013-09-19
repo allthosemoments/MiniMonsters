@@ -14,13 +14,13 @@ class Player
 		Deck hand;
 		Deck limbo;
 		Deck graveyard;
-public:
-	Player( int li )
-	{
-		life = li;
-		score = 0;
-		deck.loadPlayerDeck();
-	}
+	public:
+		Player( int li )
+		{
+			life = li;
+			score = 0;
+			deck.loadPlayerDeck();
+		}
 
 
 }
