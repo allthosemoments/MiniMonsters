@@ -51,7 +51,6 @@ class Deck
 		for (list<Card>::iterator it = cardStack.begin(); 
 			it != cardStack.end(); it++)
 		{
-			cout << "________________________________" << endl;
 			it->print(); cout << endl;
 			cout << "````````````````````````````````" << endl;
 		}

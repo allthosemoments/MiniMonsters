@@ -20,9 +20,9 @@ int main()
 		switch( command )
 		{
 		case '1': break;
-		case '2': break;
-		case '3': break;
-		case '4': break;
+		case '2': printStory(); break;
+		case '3': printInstructions(); break;
+		case '4': printAbout(); break;
 		case '0': run = false; break;
 		}
 	}
