@@ -7,12 +7,6 @@
 
 using namespace std;
 
-int gameStart( int playerCount )
-{
-	Game game;
-	return 0;
-}
-
 int main()
 {
 	printLogo();
@@ -26,9 +20,7 @@ int main()
 		cin >> command;
 		switch( command )
 		{
-		case '1': printGamePrompt();
-			int pc; cin >> pc; 
-			gameStart( pc ); break;
+		case '1':Game(); break;
 		case '2': printStory(); break;
 		case '3': printInstructions(); break;
 		case '4': printAbout(); break;
