@@ -108,7 +108,7 @@ class Deck
 		return d;
 	}
 
-	aspect aspectFrString( string s )
+	aspect aspectFromString( string s )
 	{
 		aspect a = ARTI;
 		if( s.compare("SCAR") == 0 ) a = SCAR;
