@@ -32,16 +32,17 @@ class Game
 			return n;
 		}
 
-		int difficultyToLife( char d )
+		int difficultyToLife( int d )
 		{
 			int n = 0;
 			switch ( d )
 			{
-			case '1': n = 20; break;
-			case '2': n = 16; break;
-			case '3': n = 8; break;
+			case 1: n = 20; break;
+			case 2: n = 16; break;
+			case 3: n = 8; break;
 			default: cout << "ERROR"; n = 0; break;
 			}
+			return n;
 		}
 
 };
