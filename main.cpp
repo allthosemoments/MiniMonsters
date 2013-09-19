@@ -7,6 +7,12 @@
 
 using namespace std;
 
+int gamelaunch()
+{
+	Game game;
+	return 0;
+}
+
 int main()
 {
 	printLogo();
@@ -20,7 +26,7 @@ int main()
 		cin >> command;
 		switch( command )
 		{
-		case '1':Game(); break;
+		case '1': gamelaunch(); break;
 		case '2': printStory(); break;
 		case '3': printInstructions(); break;
 		case '4': printAbout(); break;
