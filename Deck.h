@@ -25,6 +25,40 @@ class Deck
 		Deck() { };
 		list<Card> getStack() { return cardStack; };
 
+	// ----------------
+	// gameplay methods
+	// ----------------
+	list<Card> shuffle( list<Card> d )
+	{
+		vector<Card> temp;
+		for (list<Card>::iterator it = d.begin(); it != d.end(); it++)
+			temp.push_back( *it );
+
+		srand ( unsigned ( std::time(0) ) );
+		random_shuffle(temp.begin(), temp.end());
+
+		d.empty();
+		for (int i = 0; i < (signed)temp.size(); i++) d.push_back( temp[i] );
+
+		return d;
+	}
+
+	// --------
+	// printers
+	// --------
+	void print()
+	{
+		for (list<Card>::iterator it = cardStack.begin(); 
+			it != cardStack.end(); it++)
+		{
+			it->print(); cout << endl;
+			cout << "````````````````````````````````" << endl;
+		}
+	}
+
+	// ----------------
+	// deck initializing
+	// ----------------
 	void loadMainDeck()
 	{
 		list<Card> temp = readFile( "cards.txt", DECK_SIZE );
@@ -46,24 +80,15 @@ class Deck
 		cardStack = temp;
 	}
 
-	void print()
-	{
-		for (list<Card>::iterator it = cardStack.begin(); 
-			it != cardStack.end(); it++)
-		{
-			it->print(); cout << endl;
-			cout << "````````````````````````````````" << endl;
-		}
-	}
-
+	// ----------------
+	// card reading
+	// ----------------
 	list<Card> readFile( string s, int n )
 	{
-		// initate the file stream
 		ifstream read;
 		read.open( s );
 		list<Card> out;
 
-		// read cards from cards.txt into a vector of Cards
 		if ( read.is_open() )
 		{
 			for (int i = 0; i < n; i++)
@@ -91,21 +116,6 @@ class Deck
 		}
 		read.close();
 		return out;
-	}
-
-	list<Card> shuffle( list<Card> d )
-	{
-		vector<Card> temp;
-		for (list<Card>::iterator it = d.begin(); it != d.end(); it++)
-			temp.push_back( *it );
-
-		srand ( unsigned ( std::time(0) ) );
-		random_shuffle(temp.begin(), temp.end());
-
-		d.empty();
-		for (int i = 0; i < (signed)temp.size(); i++) d.push_back( temp[i] );
-
-		return d;
 	}
 
 	aspect aspectFromString( string s )

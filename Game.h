@@ -15,6 +15,9 @@ class Game
 		Deck river;
 		Deck villains;
 
+		// ----------------
+		// gameplay setup
+		// ----------------
 		int requestNumber( int floor, int ceiling )
 		{
 			bool inRange = false;
@@ -43,6 +46,18 @@ class Game
 			default: cout << "ERROR"; n = 0; break;
 			}
 			return n;
+		}
+
+		// --------
+		// debugging
+		// --------
+		void printDebugMenu()
+		{
+			cout << "Menu               Debug" << endl << 
+				"````````````````````````" << endl <<
+				"1. Player Hand     A. Main Deck" << endl <<
+				"2. The River       B. Player Deck" << endl <<
+				"3. Graveyard       C. Villain Deck" << endl;
 		}
 
 };

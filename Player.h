@@ -10,6 +10,10 @@ class Player
 		int life;
 		int score;
 	public:
+		Deck deck;
+		Deck hand;
+		Deck limbo;
+		Deck graveyard;
 		Player()
 		{
 			life = 0;
@@ -21,14 +25,14 @@ class Player
 			score = 0;
 			deck.loadPlayerDeck();
 		}
-		Deck deck;
-		Deck hand;
-		Deck limbo;
-		Deck graveyard;
 
 		// getters
 		int getLife()  { return life; }
 		int getScore() { return score; }
+
+		// setters
+		void burn( int n ) { life -= n; }
+		void heal( int n ) { life += n; }
 
 };
 
