@@ -2,7 +2,7 @@
 #define CARD_H
 
 #include <iostream>
-#include <String>
+#include <string>
 
 using namespace std;
 enum aspect{ SCAR, ARTI, EARTH, WIND, FIRE, WATER, BOLT, LEAF };

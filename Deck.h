@@ -71,7 +71,7 @@ class Deck
 				string title; getline(read, title);
 
 				string ty; getline(read, ty);
-				aspect type = aspectFrString( ty );
+				aspect type = aspectFromString( ty );
 
 				string stringAttack; getline(read, stringAttack);
 				int attack = atoi( stringAttack.c_str() );
