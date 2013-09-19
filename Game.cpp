@@ -30,10 +30,13 @@ Game::Game()
 			printDebugMenu();
 			cout << " -> ";
 
+			river.draw( 5, &mainDeck );
+
 			char command;
 			cin >> command;
 			switch( command )
 			{
+			case '2': river.print(); break;
 			case '4': turnEnd = true; break;
 			case '0': gameEnd = true; turnEnd = true; break;
 			case 'A': mainDeck.print(); break;

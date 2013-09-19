@@ -28,6 +28,18 @@ class Deck
 	// ----------------
 	// gameplay methods
 	// ----------------
+	void draw( Deck* d )
+	{
+		cardStack.push_front( d->cardStack.front() );
+		d->cardStack.pop_front();
+	}
+
+	void draw( int n, Deck* d )
+	{
+		for(int i = 0; i < n; i++)
+			draw( d );
+	}
+
 	list<Card> shuffle( list<Card> d )
 	{
 		vector<Card> temp;
@@ -37,7 +49,7 @@ class Deck
 		srand ( unsigned ( std::time(0) ) );
 		random_shuffle(temp.begin(), temp.end());
 
-		d.empty();
+		d.clear();
 		for (int i = 0; i < (signed)temp.size(); i++) d.push_back( temp[i] );
 
 		return d;
