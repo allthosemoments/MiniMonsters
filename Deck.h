@@ -71,7 +71,7 @@ class Deck
 				string title; getline(read, title);
 
 				string ty; getline(read, ty);
-				aspect type = aspectFromString( ty );
+				aspect type = aspectFrString( ty );
 
 				string stringAttack; getline(read, stringAttack);
 				int attack = atoi( stringAttack.c_str() );
@@ -103,10 +103,24 @@ class Deck
 		random_shuffle(temp.begin(), temp.end());
 
 		d.empty();
-		for (int i = 0; i < (signed)temp.size(); i++)
-		  d.push_back( temp[i] );
+		for (int i = 0; i < (signed)temp.size(); i++) d.push_back( temp[i] );
 
 		return d;
+	}
+
+	aspect aspectFrString( string s )
+	{
+		aspect a = ARTI;
+		if( s.compare("SCAR") == 0 ) a = SCAR;
+		else if ( s.compare("ARTI") == 0 ) a = ARTI;
+		else if ( s.compare("EARTH") == 0 ) a = EARTH;
+		else if ( s.compare("WIND") == 0 ) a = WIND;
+		else if ( s.compare("FIRE") == 0 ) a = FIRE;
+		else if ( s.compare("WATER") == 0 ) a = WATER;
+		else if ( s.compare("BOLT") == 0 ) a = BOLT;
+		else if ( s.compare("BOLT") == 0 ) a = LEAF;
+
+		return a;
 	}
 
 };

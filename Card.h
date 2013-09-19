@@ -7,21 +7,6 @@
 using namespace std;
 enum aspect{ SCAR, ARTI, EARTH, WIND, FIRE, WATER, BOLT, LEAF };
 
-aspect aspectFromString( string s )
-{
-	aspect a = ARTI;
-	if( s.compare("SCAR") == 0 ) a = SCAR;
-	else if ( s.compare("ARTI") == 0 ) a = ARTI;
-	else if ( s.compare("EARTH") == 0 ) a = EARTH;
-	else if ( s.compare("WIND") == 0 ) a = WIND;
-	else if ( s.compare("FIRE") == 0 ) a = FIRE;
-	else if ( s.compare("WATER") == 0 ) a = WATER;
-	else if ( s.compare("BOLT") == 0 ) a = BOLT;
-	else if ( s.compare("BOLT") == 0 ) a = LEAF;
-
-	return a;
-}
-
 class Card
 {
 	private:
@@ -31,7 +16,6 @@ class Card
 		int stats[2][3];
 		string abilityText;
 		string flavorText;
-
 	public:
 		Card(string ti, aspect ty, int att, int def, int pts, string ab, string fl)
 		{
@@ -107,7 +91,6 @@ class Card
 			case LEAF: cout << "Leaf"; break;
 			}
 		}
-		
 };
 
 #endif

@@ -29,6 +29,11 @@ void printAbout()
 	cout << endl << "-- About the game. --" << endl << endl;
 }
 
+void printGamePrompt()
+{
+		cout << endl << "How many players will be playing? ";
+}
+
 void printInstructions()
 {
 	cout << endl << 

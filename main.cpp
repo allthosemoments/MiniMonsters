@@ -2,9 +2,16 @@
 #include <string>
 
 #include "Deck.h"
+#include "Game.h"
 #include "Menu.h"
 
 using namespace std;
+
+int gameStart( int playerCount )
+{
+	Game game;
+	return 0;
+}
 
 int main()
 {
@@ -19,7 +26,9 @@ int main()
 		cin >> command;
 		switch( command )
 		{
-		case '1': break;
+		case '1': printGamePrompt();
+			int pc; cin >> pc; 
+			gameStart( pc ); break;
 		case '2': printStory(); break;
 		case '3': printInstructions(); break;
 		case '4': printAbout(); break;
