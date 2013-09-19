@@ -34,6 +34,12 @@ class Player
 		void burn( int n ) { life -= n; }
 		void heal( int n ) { life += n; }
 
+		// printers
+		void printInfo()
+		{
+			std::cout << "Life: " << life << ", Score: " << score << endl; 
+		}
+
 };
 
 #endif

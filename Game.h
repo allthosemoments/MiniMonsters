@@ -57,7 +57,9 @@ class Game
 				"````````````````````````" << endl <<
 				"1. Player Hand     A. Main Deck" << endl <<
 				"2. The River       B. Player Deck" << endl <<
-				"3. Graveyard       C. Villain Deck" << endl;
+				"3. Graveyard       C. Villain Deck" << endl <<
+				"4. End Turn        D. Player Info" << endl << endl <<
+				"0. Quit Game" << endl;
 		}
 
 };

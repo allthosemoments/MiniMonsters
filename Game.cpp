@@ -19,10 +19,32 @@ Game::Game()
 	Player players[4];
 	for( int i = 0; i < playerCount; i++ )
 		players[i] = Player( difficultyToLife(difficulty) );
+	int playerTurn = 0;
 
-	printDebugMenu();
-	cout << " -> ";
+	bool gameEnd = false;
+	while( !gameEnd )
+	{
+		bool turnEnd = false;
+		while( !turnEnd )
+		{
+			printDebugMenu();
+			cout << " -> ";
 
-	char in;
-	cin >> in;
+			char command;
+			cin >> command;
+			switch( command )
+			{
+			case '4': turnEnd = true; break;
+			case '0': gameEnd = true; turnEnd = true; break;
+			case 'A': mainDeck.print(); break;
+			case 'B': players[ playerTurn ].deck.print(); break;
+			case 'C': villains.print();
+			case 'D':
+				cout << "Player" << playerTurn + 1 << ", "; 
+				players[ playerTurn ].printInfo(); cout << endl;
+				break;
+			}
+		}
+		playerTurn = ( playerTurn + 1 ) % playerCount;
+	}
 }
