@@ -20,7 +20,7 @@ int main()
 		cin >> command;
 		switch( command )
 		{
-		case '1': { Game game; break; }
+		case '1': { Game game; game.gameplay(); break; }
 		case '2': printStory(); break;
 		case '3': printInstructions(); break;
 		case '4': printAbout(); break;

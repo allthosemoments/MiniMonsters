@@ -27,6 +27,7 @@ class Card
 			abilityText= ab;
 			flavorText = fl;
 		}
+		~Card() {};
 
 		// operators
 		bool operator== (Card oth)
