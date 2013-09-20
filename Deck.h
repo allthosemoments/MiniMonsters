@@ -52,10 +52,22 @@ class Deck
 			draw( d );
 	}
 
-	Card peek(int n)
+	bool isPresent( string s )
+	{
+		bool found = false;
+		for(list<Card>::iterator it = cardStack.begin(); 
+			it != cardStack.end() && !found; it++)
+		{
+				if(*it == s) found = true;
+		}
+		return found;
+
+	}
+
+	Card peek( int n )
 	{
 		int i = 0;
-		for (list<Card>::iterator it = cardStack.begin(); 
+		for(list<Card>::iterator it = cardStack.begin(); 
 			it != cardStack.end() && i <= n; it++, i++)
 		{
 				if(i == n)
@@ -69,14 +81,14 @@ class Deck
 	list<Card> shuffle( list<Card> d )
 	{
 		vector<Card> temp;
-		for (list<Card>::iterator it = d.begin(); it != d.end(); it++)
+		for(list<Card>::iterator it = d.begin(); it != d.end(); it++)
 			temp.push_back( *it );
 
 		srand ( unsigned ( std::time(0) ) );
 		random_shuffle(temp.begin(), temp.end());
 
 		d.clear();
-		for (int i = 0; i < (signed)temp.size(); i++) d.push_back( temp[i] );
+		for(int i = 0; i < (signed)temp.size(); i++) d.push_back( temp[i] );
 
 		return d;
 	}
@@ -86,7 +98,7 @@ class Deck
 	// --------
 	void print()
 	{
-		for (list<Card>::iterator it = cardStack.begin(); 
+		for(list<Card>::iterator it = cardStack.begin(); 
 			it != cardStack.end(); it++)
 		{
 			it->print(); cout << endl;
