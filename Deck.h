@@ -97,8 +97,7 @@ class Deck
 	// ----------------
 	list<Card> readFile( string s, int n )
 	{
-		ifstream read;
-		read.open( s, ios::in );
+		ifstream read( s.c_str() );
 		list<Card> out;
 
 		if ( read.is_open() )
@@ -125,8 +124,8 @@ class Deck
 
 				getline(read, title);
 			}
+			read.close();
 		}
-		read.close();
 		return out;
 	}
 
