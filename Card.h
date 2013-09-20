@@ -31,7 +31,7 @@ class Card
 		{
 			title = ti;
 		}
-		~Card() {};
+		~Card() { };
 
 		// operators
 		bool operator== (Card oth)

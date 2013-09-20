@@ -26,6 +26,7 @@ class Player
 			score = 0;
 			deck.loadPlayerDeck();
 		}
+		~Player() { }
 
 		// getters
 		int getLife()  { return life; }

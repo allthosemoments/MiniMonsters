@@ -22,7 +22,8 @@ class Deck
 	private:
 		list<Card> cardStack;
 	public:
-		Deck() { };
+		Deck()  { };
+		~Deck() { };
 		list<Card> getStack() { return cardStack; };
 
 	// ----------------
@@ -61,7 +62,6 @@ class Deck
 				if(*it == s) found = true;
 		}
 		return found;
-
 	}
 
 	Card peek( int n )
