@@ -62,6 +62,8 @@ class Deck
 					return *it;
 				i++;
 		}
+		
+		return Card("ERROR");
 	}
 
 	list<Card> shuffle( list<Card> d )

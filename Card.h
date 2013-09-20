@@ -27,6 +27,10 @@ class Card
 			abilityText= ab;
 			flavorText = fl;
 		}
+		Card(string ti)
+		{
+			title = ti;
+		}
 		~Card() {};
 
 		// operators
