@@ -136,7 +136,7 @@ class Deck
 	list<Card> readFile( string s, int n )
 	{
 		ifstream read;
-		read.open( s, ios::in );
+		read.open( s.c_str() );
 		list<Card> out;
 
 		if ( read.is_open() )
