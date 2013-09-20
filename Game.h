@@ -4,7 +4,8 @@
 #include <iostream>
 #include <string>
 
-#include "Game.cpp"
+#include "Deck.h"
+#include "Player.h"
 
 using namespace std;
 
