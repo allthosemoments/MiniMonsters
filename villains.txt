@@ -1,13 +1,13 @@
 Aerborne Bovine
-2
+WIND
 2
 12
 0
 foo
-"Fatchez la vache!"
+"Fetchez la vache!"
 
 Darkwood Monstrosity
-6
+LEAF
 2
 12
 0
@@ -15,7 +15,7 @@ foo
 "Wood so strong even fire cannot scorch it."
 
 Deepsea Leviathan
-4
+WATER
 2
 12
 0
@@ -23,7 +23,7 @@ foo
 "A monstrosity from the deep."
 
 Firestorm Dragon
-3
+FIRE
 2
 12
 0
@@ -31,7 +31,7 @@ foo
 "He practices scorched earth warfare."
 
 Giant Boltwolf
-5
+BOLT
 2
 12
 0
@@ -39,7 +39,7 @@ foo
 "His fur bristles with overcharged electricty."
 
 Specter of Atlas
-1
+EARTH
 2
 12
 0
