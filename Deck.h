@@ -28,16 +28,40 @@ class Deck
 	// ----------------
 	// gameplay methods
 	// ----------------
+	void discardAll( Deck* to )
+	{
+		while( !cardStack.empty() )
+		{
+			to->cardStack.push_front( cardStack.front() );
+			cardStack.pop_front();
+		}
+	}
+
 	void draw( Deck* d )
 	{
-		cardStack.push_front( d->cardStack.front() );
-		d->cardStack.pop_front();
+		if( !d->cardStack.empty() )
+		{
+			cardStack.push_front( d->cardStack.front() );
+			d->cardStack.pop_front();
+		}
 	}
 
 	void draw( int n, Deck* d )
 	{
 		for(int i = 0; i < n; i++)
 			draw( d );
+	}
+
+	Card peek(int n)
+	{
+		int i = 0;
+		for (list<Card>::iterator it = cardStack.begin(); 
+			it != cardStack.end() && i <= n; it++, i++)
+		{
+				if(i == n)
+					return *it;
+				i++;
+		}
 	}
 
 	list<Card> shuffle( list<Card> d )
@@ -97,7 +121,8 @@ class Deck
 	// ----------------
 	list<Card> readFile( string s, int n )
 	{
-		ifstream read( s.c_str() );
+		ifstream read;
+		read.open( s, ios::in );
 		list<Card> out;
 
 		if ( read.is_open() )
@@ -124,8 +149,8 @@ class Deck
 
 				getline(read, title);
 			}
-			read.close();
 		}
+		read.close();
 		return out;
 	}
 
