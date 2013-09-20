@@ -6,6 +6,7 @@
 
 #include "Deck.h"
 #include "Player.h"
+#include "Stadium.h"
 
 using namespace std;
 
@@ -19,7 +20,7 @@ class Game
 		Deck river;
 		Deck villains;
 
-				// --------------------------------
+		// --------------------------------
 		// the main attraction
 		// --------------------------------
 		void gameplay()
@@ -49,6 +50,9 @@ class Game
 				// actions during a player's turn
 				while( !turnEnd )
 				{
+					cout << "Player" << playerTurn + 1 << " ";
+					currentPlayer->printInfo();
+					cout << endl;
 					printDebugMenu();
 					cout << " -> ";
 
@@ -62,7 +66,9 @@ class Game
 					case '4': currentPlayer->limbo.print(); break;
 					case '5': currentPlayer->graveyard.print(); break;
 					case '6':
-					case '7': cout << "Empty method." << endl << endl;
+					case '7': 
+						{ Stadium stadium; stadium.startFight(*currentPlayer, 0, river); }
+						break;
 					case '0': gameEnd = true;
 					case '8': turnEnd = true; break;
 					case 'A': mainDeck.print(); break;
