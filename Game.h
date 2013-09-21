@@ -113,7 +113,6 @@ class Game
 						break;
 					}
 				}
-
 				// post-turn cleanup
 				river.discardAll( &mainDiscard );
 				currentPlayer->hand.discardAll( &(currentPlayer->graveyard) );
@@ -126,8 +125,10 @@ class Game
 		// ----------------
 		void startFight( Player* p )
 		{
-			cout << "inside the fight method" << endl;
+			cout << "Pick the card you wish to target" << endl;
 			river.printNumberList();
+			int targetIndex = requestNumber(1, river.size());
+			p->graveyard.add( river.takeByIndex( targetIndex ) );
 		}
 
 		// ----------------

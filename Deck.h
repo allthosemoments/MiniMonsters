@@ -31,6 +31,11 @@ class Deck
 	// ----------------
 	// gameplay methods
 	// ----------------
+	void add(Card c)
+	{
+		cardStack.push_front( c );
+	}
+
 	void discardAll( Deck* to )
 	{
 		while( !cardStack.empty() )
@@ -107,6 +112,20 @@ class Deck
 			it != cardStack.end(); it++)
 				total += it->getAttack();
 		return total;
+	}
+
+	Card takeByIndex( int n )
+	{
+		int i = 1;
+		list<Card>::iterator it = cardStack.begin();
+		while( i < n && it != cardStack.end() )
+		{
+			it++;
+			i++;
+		}
+		Card temp = *it;
+		cardStack.remove( *it );
+		return temp;
 	}
 
 	// --------
