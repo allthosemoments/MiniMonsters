@@ -24,7 +24,9 @@ class Deck
 	public:
 		Deck()  { };
 		~Deck() { };
-		list<Card> getStack() { return cardStack; };
+		list<Card> getStack() { return cardStack; }
+		int size() { return cardStack.size(); }
+
 
 	// ----------------
 	// gameplay methods
@@ -76,6 +78,11 @@ class Deck
 		}
 		
 		return Card("ERROR");
+	}
+
+	void shuffle()
+	{
+		cardStack = shuffle( cardStack );
 	}
 
 	list<Card> shuffle( list<Card> d )

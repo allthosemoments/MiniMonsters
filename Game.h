@@ -10,6 +10,9 @@
 
 using namespace std;
 
+const int HAND_SIZE = 5;
+const int RIVER_SIZE = 5;
+
 class Game
 {
 	public:
@@ -43,9 +46,20 @@ class Game
 			while( !gameEnd )
 			{
 				bool turnEnd = false;
-				river.draw( 5, &mainDeck );
+				if(mainDeck.size() > RIVER_SIZE)
+				{
+					river.draw( RIVER_SIZE, &mainDeck );
+				}
+				else
+				{
+					int difference = RIVER_SIZE - mainDeck.size();
+					mainDeck.discardAll( &river );
+					mainDiscard.discardAll( &mainDeck );
+					mainDeck.shuffle();
+					river.draw( difference, &mainDeck );
+				}
 				Player* currentPlayer = &players[ playerTurn ];
-				currentPlayer->hand.draw( 5, &currentPlayer->deck );
+				currentPlayer->hand.draw( HAND_SIZE, &currentPlayer->deck );
 
 				// actions during a player's turn
 				while( !turnEnd )
@@ -74,7 +88,8 @@ class Game
 					case 'A': mainDeck.print(); break;
 					case 'B': players[ playerTurn ].deck.print(); break;
 					case 'C': villains.print();
-					case 'D':
+					case 'D': mainDiscard.print(); break;
+					case 'E':
 						cout << "Player" << playerTurn + 1 << ", "; 
 						currentPlayer->printInfo(); cout << endl << endl;
 						break;
@@ -82,6 +97,7 @@ class Game
 				}
 
 				// post-turn wrap-up
+				river.discardAll( &mainDiscard );
 				currentPlayer->hand.discardAll( &currentPlayer->graveyard );
 				playerTurn = ( playerTurn + 1 ) % playerCount;
 			}
