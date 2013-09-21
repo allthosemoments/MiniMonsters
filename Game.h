@@ -45,6 +45,7 @@ class Game
 			bool gameEnd = false;
 			while( !gameEnd )
 			{
+				// pre-turn setup
 				bool turnEnd = false;
 				if(mainDeck.size() > RIVER_SIZE)
 				{
@@ -59,7 +60,18 @@ class Game
 					river.draw( difference, &mainDeck );
 				}
 				Player* currentPlayer = &players[ playerTurn ];
-				currentPlayer->hand.draw( HAND_SIZE, &currentPlayer->deck );
+				if(currentPlayer->deck.size() > HAND_SIZE)
+				{
+					currentPlayer->hand.draw( HAND_SIZE, &currentPlayer->deck );
+				}
+				else
+				{
+					int difference = HAND_SIZE - currentPlayer->deck.size();
+					currentPlayer->deck.discardAll( &currentPlayer->hand );
+					currentPlayer->graveyard.discardAll( &currentPlayer->deck );
+					currentPlayer->deck.shuffle();
+					currentPlayer->hand.draw( difference, &currentPlayer->deck );
+				}
 
 				// actions during a player's turn
 				while( !turnEnd )
@@ -96,9 +108,9 @@ class Game
 					}
 				}
 
-				// post-turn wrap-up
+				// post-turn cleanup
 				river.discardAll( &mainDiscard );
-				currentPlayer->hand.discardAll( &currentPlayer->graveyard );
+				currentPlayer->hand.discardAll( &(currentPlayer->graveyard) );
 				playerTurn = ( playerTurn + 1 ) % playerCount;
 			}
 		}
@@ -146,8 +158,8 @@ class Game
 				"1. View Hand            A. Main Deck" << endl <<
 				"2. View River           B. Player Deck" << endl <<
 				"3. View Villain         C. Villain Deck" << endl <<
-				"4. View Limbo           D. Player Info" << endl <<
-				"5. View Graveyard" << endl <<
+				"4. View Limbo           D. MainDiscard" << endl <<
+				"5. View Graveyard       E. Player Info" << endl <<
 				"6. Target River" << endl <<
 				"7. Target Villain" << endl << 
 				"8. End Turn" << endl << endl <<
