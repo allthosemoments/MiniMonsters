@@ -10,7 +10,7 @@ enum aspect{ SCAR, ARTI, EARTH, WIND, FIRE, WATER, BOLT, LEAF };
 class Card
 {
 	private:
-		Card() { };
+		Card() {};
 		string title;
 		aspect type;
 		int stats[2][3];

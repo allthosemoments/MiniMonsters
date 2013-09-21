@@ -5,8 +5,8 @@
 #include <string>
 
 #include "Deck.h"
-#include "Player.h"
 #include "Stadium.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -16,7 +16,13 @@ const int RIVER_SIZE = 5;
 class Game
 {
 	public:
-		Game() {};
+		Game()
+		{
+			Deck mainDeck;
+			Deck mainDiscard;
+			Deck river;
+			Deck villains;
+		}
 		~Game() {};
 		Deck mainDeck;
 		Deck mainDiscard;
@@ -60,7 +66,7 @@ class Game
 					river.draw( difference, &mainDeck );
 				}
 				Player* currentPlayer = &players[ playerTurn ];
-				if(currentPlayer->deck.size() > HAND_SIZE)
+				if(currentPlayer->deck.size() >= HAND_SIZE)
 				{
 					currentPlayer->hand.draw( HAND_SIZE, &currentPlayer->deck );
 				}
@@ -93,7 +99,7 @@ class Game
 					case '5': currentPlayer->graveyard.print(); break;
 					case '6':
 					case '7': 
-						{ Stadium stadium; stadium.startFight(*currentPlayer, 0, river); }
+						startFight( currentPlayer );
 						break;
 					case '0': gameEnd = true;
 					case '8': turnEnd = true; break;
@@ -113,6 +119,15 @@ class Game
 				currentPlayer->hand.discardAll( &(currentPlayer->graveyard) );
 				playerTurn = ( playerTurn + 1 ) % playerCount;
 			}
+		}
+
+		// ----------------
+		// gameplay methods
+		// ----------------
+		void startFight( Player* p )
+		{
+			cout << "inside the fight method" << endl;
+			river.printNumberList();
 		}
 
 		// ----------------

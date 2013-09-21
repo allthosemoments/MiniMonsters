@@ -36,11 +36,6 @@ class Player
 		void burn( int n ) { life -= n; }
 		void heal( int n ) { life += n; }
 
-		// turn handlers
-		void drawNewHand()
-		{
-
-		}
 		// printers
 		void printInfo()
 		{

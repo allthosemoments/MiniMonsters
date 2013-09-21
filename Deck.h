@@ -22,8 +22,8 @@ class Deck
 	private:
 		list<Card> cardStack;
 	public:
-		Deck()  { };
-		~Deck() { };
+		Deck()  {};
+		~Deck() {};
 		list<Card> getStack() { return cardStack; }
 		int size() { return cardStack.size(); }
 
@@ -80,9 +80,9 @@ class Deck
 		return Card("ERROR");
 	}
 
-	void shuffle()
-	{
-		cardStack = shuffle( cardStack );
+	void shuffle() 
+	{ 
+		cardStack = shuffle( cardStack ); 
 	}
 
 	list<Card> shuffle( list<Card> d )
@@ -100,6 +100,15 @@ class Deck
 		return d;
 	}
 
+	int sumAttack()
+	{
+		int total = 0;
+		for(list<Card>::iterator it = cardStack.begin(); 
+			it != cardStack.end(); it++)
+				total += it->getAttack();
+		return total;
+	}
+
 	// --------
 	// printers
 	// --------
@@ -110,6 +119,18 @@ class Deck
 		{
 			it->print(); cout << endl;
 			cout << "````````````````````````````````" << endl;
+		}
+	}
+
+	void printNumberList()
+	{
+		int i = 1;
+		for(list<Card>::iterator it = cardStack.begin(); 
+			it != cardStack.end(); it++)
+		{
+			cout << i << ". ";
+			cout << it->getTitle(); it->printStats(); cout << endl;
+			i++;
 		}
 	}
 
