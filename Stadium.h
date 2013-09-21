@@ -4,9 +4,7 @@
 #include <iostream>
 #include <string>
 
-#include "Card.h"
 #include "Deck.h"
-#include "Game.h"
 #include "Player.h"
 
 using namespace std;
@@ -19,14 +17,7 @@ class Stadium
 		Stadium() {};
 		~Stadium() {};
 
-	// --------
-	// launch the battle
-	// --------
-	void startFight( Player p, int n, Deck d )
-	{
-		cout << endl << 
-			"inside the battle method" << endl << endl;
-	}
+
 };
 
 #endif
