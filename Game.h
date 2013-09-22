@@ -91,10 +91,8 @@ class Game
 					case '3': villains.peek(0).print(); break;
 					case '4': currentPlayer->limbo.print(); break;
 					case '5': currentPlayer->graveyard.print(); break;
-					case '6':
-					case '7': 
-						startFight( currentPlayer );
-						break;
+					case '6': startFight( currentPlayer ); break;
+					case '7': cout << "---- Empty method ----" << endl; break;
 					case '0': gameEnd = true;
 					case '8': turnEnd = true; break;
 					case 'A': mainDeck.print(); break;
@@ -109,7 +107,8 @@ class Game
 				}
 				// post-turn cleanup
 				river.discardAll( &mainDiscard );
-				currentPlayer->hand.discardAll( &(currentPlayer->graveyard) );
+				currentPlayer->hand.discardAll( &currentPlayer->graveyard );
+				currentPlayer->limbo.discardAll( &currentPlayer->graveyard );
 				playerTurn = ( playerTurn + 1 ) % playerCount;
 			}
 		}
