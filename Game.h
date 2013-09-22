@@ -16,13 +16,7 @@ const int RIVER_SIZE = 5;
 class Game
 {
 	public:
-		Game()
-		{
-			Deck mainDeck;
-			Deck mainDiscard;
-			Deck river;
-			Deck villains;
-		}
+		Game() {};
 		~Game() {};
 		Deck mainDeck;
 		Deck mainDiscard;
@@ -125,10 +119,36 @@ class Game
 		// ----------------
 		void startFight( Player* p )
 		{
-			cout << "Pick the card you wish to target" << endl;
+			cout << "Pick the card you wish to target." << endl;
 			river.printNumberList();
 			int targetIndex = requestNumber(1, river.size());
-			p->graveyard.add( river.takeByIndex( targetIndex ) );
+
+			Deck target;
+			target.add(river.takeByIndex( targetIndex ));
+
+			cout << "Pick a card to play, or enter 0 to return to the menu." << endl;
+			Deck inPlay;
+			bool quit = false;
+			while(!quit && inPlay.sumAttack() < target.peek(0).getDefense())
+			{
+				p->hand.printNumberList();
+				int playIndex = requestNumber(0, p->hand.size() );
+
+				if
+					(playIndex == 0) quit = true;
+				else
+					inPlay.add( p->hand.takeByIndex(playIndex));
+			}
+
+			if(quit) 
+			{
+				inPlay.discardAll( &p->hand );
+			}
+			else
+			{
+				inPlay.discardAll( &p->limbo );
+				p->graveyard.add( target.takeByIndex( 0 ) );
+			}
 		}
 
 		// ----------------
