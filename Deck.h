@@ -149,7 +149,7 @@ class Deck
 			it != cardStack.end(); it++)
 		{
 			cout << i << ". ";
-			cout << it->getTitle(); it->printStats(); cout << endl;
+			cout << it->getTitle() << " "; it->printStats(); cout << endl;
 			i++;
 		}
 	}
